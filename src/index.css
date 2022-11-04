@@ -1,0 +1,108 @@
+:root{
+  --bg-color:#4b145b;
+  --primary-white:#ffffff;
+  --max-width: 920px;
+  --width:99vw;
+  --line-height:1.4rem;
+  --word-space:.10rem;
+}
+
+*,::after,::before{
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+  background-color: var(--bg-color);
+  font-family: monospace;
+}
+
+main{
+  min-height: 100vh; 
+}
+
+.container{
+  background-color: var(--primary-white);
+  width: var(--width);
+  max-width: var(--max-width);
+  word-spacing: var(--word-space);
+  line-height: var(--line-height);
+  border-radius: 6px;
+  margin: 2.7rem auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+h1{
+  font-size: 2rem;
+  line-height: 1.1;
+  font-weight: 500;
+}
+h2{
+  font-size: 1.2rem;
+  color: rgb(39, 39, 39);
+}
+p{
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* Accordion title */
+.accordion-aside{
+  padding: 1.5rem;
+}
+/* Question and Answer Container */
+.qa-container{
+  padding:0 1rem;
+}
+.qa-container article{
+  padding: 0.5rem 1rem ;
+  margin: 1.5rem 0;
+  box-shadow:  0 5px 15px rgba(0, 0, 0, 0.2) ;
+}
+/* Question Container */
+.question-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+/* Buttons */
+.btn-radio{
+  width: 40px;
+  height: 40px;
+  border-radius: 50% ;
+  font-size: 2rem;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fa6f3c;
+  background-color: rgb(255, 240, 182);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.btn-radio svg{
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive  */
+@media only screen and (max-width: 758px) {
+  .container{
+   display: flex;
+   flex-direction: column;
+  }
+  .qa-container{
+    padding:0 .4rem;
+  }
+  .qa-container article{
+    margin: 1rem 0;
+  }
+  p{
+    font-size: .8rem;
+  }
+}
