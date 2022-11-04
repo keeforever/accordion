@@ -1,79 +1,88 @@
-:root{
-  --bg-color:#4b145b;
-  --primary-white:#ffffff;
+:root {
+  --bg-color: #4b145b;
+  --primary-white: #ffffff;
   --max-width: 920px;
-  --width:99vw;
-  --line-height:1.4rem;
-  --word-space:.10rem;
+  --width: 90vw;
+  --line-height: 1.4rem;
+  --word-space: 0.1rem;
 }
 
-*,::after,::before{
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-
-body{
+body {
   background-color: var(--bg-color);
   font-family: monospace;
 }
 
-main{
-  min-height: 100vh; 
+main {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
 }
 
-.container{
+.container {
   background-color: var(--primary-white);
   width: var(--width);
   max-width: var(--max-width);
   word-spacing: var(--word-space);
   line-height: var(--line-height);
   border-radius: 6px;
-  margin: 2.7rem auto;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
 
-h1{
+h1 {
   font-size: 2rem;
   line-height: 1.1;
   font-weight: 500;
 }
-h2{
+
+h2 {
   font-size: 1.2rem;
   color: rgb(39, 39, 39);
 }
-p{
+
+p {
   font-size: 1rem;
   font-weight: 300;
 }
 
 /* Accordion title */
-.accordion-aside{
+.accordion-aside {
   padding: 1.5rem;
 }
+
 /* Question and Answer Container */
-.qa-container{
-  padding:0 1rem;
+.qa-container {
+  padding: 0 1rem;
 }
-.qa-container article{
-  padding: 0.5rem 1rem ;
+
+.qa-container article {
+  padding: 0.5rem 1rem;
   margin: 1.5rem 0;
-  box-shadow:  0 5px 15px rgba(0, 0, 0, 0.2) ;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
 /* Question Container */
-.question-container{
+.question-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
- 
 }
+
 /* Buttons */
-.btn-radio{
+.btn-radio {
   width: 40px;
   height: 40px;
-  border-radius: 50% ;
+  border-radius: 50%;
   font-size: 2rem;
   border: none;
   display: flex;
@@ -85,24 +94,24 @@ p{
   cursor: pointer;
   flex-shrink: 0;
 }
-.btn-radio svg{
+
+.btn-radio svg {
   width: 20px;
   height: 20px;
 }
 
 /* Responsive  */
-@media only screen and (max-width: 758px) {
-  .container{
-   display: flex;
-   flex-direction: column;
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
   }
-  .qa-container{
-    padding:0 .4rem;
-  }
-  .qa-container article{
+
+  .qa-container article {
     margin: 1rem 0;
   }
-  p{
-    font-size: .8rem;
+
+  p {
+    font-size: 0.8rem;
   }
 }
